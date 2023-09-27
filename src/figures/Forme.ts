@@ -1,5 +1,5 @@
-abstract class Forme {
-    public abstract aire(): number;
-    public abstract perimetre(): number;
+export interface IForme {
+    aire(): number;
+    perimetre(): number;
 }
  
