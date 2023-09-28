@@ -2,8 +2,11 @@ import { IForme } from "./Forme";
 
 export class Cercle implements IForme {
    private _rayon : number;
+   public static nbrNomClasse: number = 0 
+
    constructor(_rayon: number){
       this._rayon = _rayon
+      Cercle.nbrNomClasse++
    }
    public perimetre(): number {
       let diametre = this._rayon * 2
@@ -25,5 +28,17 @@ export class Cercle implements IForme {
 
    public set rayon(rayon: number){
       this._rayon = rayon
+   }
+
+   public static sommeAirePerimetre(cercles: Cercle[]){
+      let sommeAire = 0
+      let sommePerimetre = 0
+
+      for(const cercle of cercles){
+         sommeAire += cercle.aire()
+         sommePerimetre += cercle.aire()
+         console.log(`voici la sommes des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
+         return sommeAire && sommePerimetre
+      } 
    }
 }

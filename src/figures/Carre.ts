@@ -1,9 +1,11 @@
 import { IForme } from "./Forme";
 export class Carre implements IForme {
     private _longeurCote: number;
+    public static nbrNomClasse: number = 0 
     
     constructor(_longeurCote: number){
         this._longeurCote = _longeurCote
+        Carre.nbrNomClasse++
     }
     
     public perimetre(): number {

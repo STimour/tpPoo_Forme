@@ -3,11 +3,11 @@ import { IForme } from "./Forme";
 export class Rectangle implements IForme {
     private _longeurCote: number;
     private _largeurCote: number;
-
+    public static nbrNomClasse: number = 0 
     constructor(_longeurCote: number, _largeurCote: number){
         this._largeurCote = _largeurCote
         this._longeurCote = _longeurCote
-  
+        Rectangle.nbrNomClasse++
     }
 
     public perimetre(): number {
