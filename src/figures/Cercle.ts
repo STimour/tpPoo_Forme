@@ -37,7 +37,7 @@ export class Cercle implements IForme {
       for(const cercle of cercles){
          sommeAire += cercle.aire()
          sommePerimetre += cercle.perimetre()
-         console.log(`voici la sommes des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
+         console.log(`voici la somme des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
       } 
       return {sommeAire, sommePerimetre}
    }
