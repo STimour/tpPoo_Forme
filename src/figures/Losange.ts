@@ -39,4 +39,17 @@ export class Losange implements IForme {
     public set grandeDiag(grandeDiag: number) {
         this._grandeDiag = grandeDiag;
     }
+
+    public static sommeAirePerimetre(losanges: Losange[]): {sommeAire: number, sommePerimetre: number}{
+        let sommeAire = 0
+        let sommePerimetre = 0
+
+        for(const losange of losanges){
+            sommeAire += losange.aire()
+            sommePerimetre += losange.perimetre()
+            console.log(`voici la somme des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
+        }
+
+        return {sommeAire, sommePerimetre}
+   }
 }

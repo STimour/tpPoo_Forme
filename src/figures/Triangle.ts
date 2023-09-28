@@ -20,5 +20,13 @@ export class Triangle implements IForme {
        return aire 
    }
 
-   
+   public static sommeAirePerimetre(triangles: Triangle[]): {sommeAire: number, sommePerimetre: number}{
+        let sommeAire = 0
+        let sommePerimetre = 0
+        for(const triangle of triangles){
+            sommeAire += triangle.aire()
+            sommePerimetre += triangle.perimetre()
+        }
+        return {sommeAire, sommePerimetre}
+   }
 } 

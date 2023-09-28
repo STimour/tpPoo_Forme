@@ -74,4 +74,17 @@ export class Quadrilatere implements IForme {
     public set diag(diag: number){
         this._diag = diag
     }
+
+    public static sommeAirePerimetre(quadrilateres: Quadrilatere[]): {sommeAire: number, sommePerimetre: number}{
+        let sommeAire = 0
+        let sommePerimetre = 0
+
+        for(const quadrilatere of quadrilateres){
+            sommeAire += quadrilatere.aire()
+            sommePerimetre += quadrilatere.perimetre()
+            console.log(`voici la somme des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
+        }
+
+        return {sommeAire, sommePerimetre}
+   }
 } 

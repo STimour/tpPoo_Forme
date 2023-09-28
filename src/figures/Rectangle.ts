@@ -39,4 +39,17 @@ export class Rectangle implements IForme {
     public set largeurCote(largeurCote: number){
      this._largeurCote = largeurCote
     }   
+
+    public static sommeAirePerimetre(rectangeles: Rectangle[]): {sommeAire: number, sommePerimetre: number}{
+        let sommeAire = 0
+        let sommePerimetre = 0
+
+        for(const rectangele of rectangeles){
+            sommeAire += rectangele.aire()
+            sommePerimetre += rectangele.perimetre()
+            console.log(`voici la somme des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
+        }
+
+        return {sommeAire, sommePerimetre}
+   }
 } 

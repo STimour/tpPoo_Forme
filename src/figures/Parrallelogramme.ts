@@ -35,4 +35,17 @@ export class Parrallelogramme implements IForme {
     public set cote(cote: number) {
         this._cote = cote;
     }
+
+    public static sommeAirePerimetre(parrallelogrammes: Parrallelogramme[]): {sommeAire: number, sommePerimetre: number}{
+        let sommeAire = 0
+        let sommePerimetre = 0
+
+        for(const parrallelogramme of parrallelogrammes){
+            sommeAire += parrallelogramme.aire()
+            sommePerimetre += parrallelogramme.perimetre()
+            console.log(`voici la somme des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
+        }
+
+        return {sommeAire, sommePerimetre}
+   }
 } 

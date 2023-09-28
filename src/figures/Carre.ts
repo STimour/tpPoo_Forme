@@ -28,5 +28,17 @@ export class Carre implements IForme {
         this._longeurCote = longeurCote
    }
 
+   public static sommeAirePerimetre(carres: Carre[]): {sommeAire: number, sommePerimetre: number}{
+        let sommeAire = 0
+        let sommePerimetre = 0
+
+        for(const carre of carres){
+            sommeAire += carre.aire()
+            sommePerimetre += carre.perimetre()
+            console.log(`voici la somme des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
+        }
+
+        return {sommeAire, sommePerimetre}
+   }
 
 } 

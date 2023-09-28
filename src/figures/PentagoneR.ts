@@ -42,4 +42,17 @@ export class PentagoneR implements IForme {
         this._largeurCote = largeurCote
     }
 
+    public static sommeAirePerimetre(pentagonesR: PentagoneR[]): {sommeAire: number, sommePerimetre: number}{
+        let sommeAire = 0
+        let sommePerimetre = 0
+
+        for(const pentagoneR of pentagonesR){
+            sommeAire += pentagoneR.aire()
+            sommePerimetre += pentagoneR.perimetre()
+            console.log(`voici la somme des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
+        }
+
+        return {sommeAire, sommePerimetre}
+   }
+
 } 
