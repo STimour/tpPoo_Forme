@@ -41,4 +41,14 @@ export class Cercle implements IForme {
          return sommeAire && sommePerimetre
       } 
    }
+
+   public static sommeAirePerimetre2(cercle: Cercle){
+      let sommeAire = 0 
+      let sommePerimetre = 0
+      
+      sommeAire += cercle.aire()
+      sommePerimetre += cercle.perimetre()
+      console.log(`voici la sommes des aires : ${sommeAire}. Voici la somme des Perimetre ${sommePerimetre}`)
+      return sommeAire && sommePerimetre
+   }
 }

@@ -32,10 +32,6 @@ import { Carre } from "./figures/Carre"
 import { Rectangle } from "./figures/Rectangle"
 import { Triangle } from "./figures/Triangle"
 
-const cercle = new Cercle(3)
-  cercle.perimetre()
-  cercle.aire()
-
 console.log("----------------")
 
 const carre = new Carre(3)
@@ -53,3 +49,13 @@ console.log("----------------")
 const triangle = new Triangle(2, 3)
   triangle.aire()
   triangle.perimetre()
+
+
+const cercle = new Cercle(3)
+  cercle.perimetre()
+  cercle.aire()
+const cercle2 = new Cercle(5)
+const mesCercles = [cercle, cercle2]
+Cercle.sommeAirePerimetre(mesCercles)
+Cercle.sommeAirePerimetre2(cercle2)
+console.log(Cercle.nbrNomClasse)
